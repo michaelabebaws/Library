@@ -11,10 +11,19 @@ function Book(title, author, pages, hasRead) {
     this.hasRead = hasRead;
 }
 
-function addBookToLibrary() {
+function addBookToLibrary(title, author, pages, hasRead) {
     const newBook = new Book(title, author, pages, hasRead);
     myLibrary.push(newBook);
 }
+
+
+ function uniqueId(id) {
+
+ }
+
+console.log(uniqueId());
+
+
 
 showForm.addEventListener('click', () => {
     dialog.showModal();
@@ -23,3 +32,5 @@ showForm.addEventListener('click', () => {
 closeForm.addEventListener('click', () => {
     dialog.close();
 });
+
+
