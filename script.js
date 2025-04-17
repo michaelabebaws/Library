@@ -1,4 +1,3 @@
-// Select elements
 const dialog = document.querySelector('dialog');
 const showBtn = document.querySelector('dialog + button');
 const cancelBtn = document.querySelector('#cancelBtn'); // Ensure the cancel button has an ID
@@ -11,7 +10,7 @@ function Book(title, author, pages, hasRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.hasRead = hasRead; // Make sure this matches later in your code
+    this.hasRead = hasRead; 
 }
 
 // Toggle the read status of a book
@@ -50,10 +49,11 @@ function toggleBookReadStatus(id) {
 // Display all books in the library
 function displayLibrary() {
     const container = document.querySelector('.container');
-    container.innerHTML = ""; // Clear existing content
+    container.innerHTML = ""; 
 
     myLibrary.forEach(book => {
         const card = document.createElement('div');
+        card.className = 'book-card';
         card.dataset.id = book.id;
 
         card.innerHTML = `
@@ -89,8 +89,8 @@ form.addEventListener("submit", (event) => {
 
     addBookToLibrary(title, author, pages, hasRead);
 
-    form.reset(); // Clear form
-    dialog.close(); // Close dialog
+    form.reset(); 
+    dialog.close(); 
 });
 
 // Show dialog when "New Book" button is clicked
